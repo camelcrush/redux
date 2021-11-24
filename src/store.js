@@ -4,11 +4,17 @@ const ADD = "ADD";
 const DELETE = "DELETE";
 
 const addToDo = (text) => {
-  return { type: ADD, text };
+  return {
+    type: ADD,
+    text,
+  };
 };
 
 const deleteToDo = (id) => {
-  return { tpye: DELETE, id };
+  return {
+    type: DELETE,
+    id: parseInt(id),
+  };
 };
 
 const reducer = (state = [], action) => {
